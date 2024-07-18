@@ -96,10 +96,6 @@ h2 {
     padding: 8px;
 }
 
-.nav__link--primary:hover {
-    text-decoration: none;
-}
-
 .btn__menu {
     background-color: transparent;
     font-size: 40px;
