@@ -8,16 +8,17 @@ async function renderBooks(filter) {
   if (!books) {
     books = await getBooks();
   }
-  
-  booksWrapper.classList.remove('books__loading')
 
-  if (filter === 'LOW_TO_HIGH') {
-    books.sort((a, b) => (a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice));
-  } else if (filter === 'HIGH_TO_LOW') {
-    books.sort((a,b) => (b.salePrice || b.originalPrice) - (a.salePrice || a.originalPrice));
-  } else if (filter === 'RATING') {
-    books.sort((a,b) => b.rating - a.rating);
-  }
+    booksWrapper.classList.remove('books__loading')
+    
+    if (filter === 'LOW_TO_HIGH') {
+      books.sort((a, b) => (a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice));
+    } else if (filter === 'HIGH_TO_LOW') {
+      books.sort((a,b) => (b.salePrice || b.originalPrice) - (a.salePrice || a.originalPrice));
+    } else if (filter === 'RATING') {
+      books.sort((a,b) => b.rating - a.rating);
+    }
+  
 
   const booksHtml = books
     .map((book) => {

@@ -457,16 +457,16 @@ BOOKS PAGE
     align-items: center;
     justify-content: center;
     padding-top: 60px;
-    font-size: 60px;
-    color: #7342d6;
+    font-size: 50px;
+    color: rgb(29, 177, 29);
   }
   
   .books__loading--spinner {
-    display: none !important;
+    display: none;
   }
   
   .books__loading .books__loading--spinner {
-    display: block !important;
+    display: block;
   }
   
   .fa-spinner {
